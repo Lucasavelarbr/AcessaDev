@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="Contraste-ferramenta.css">
+    <title>Contraste-ferramenta</title>
+</head>
+<body>
+    <header>
+    <a href="./ferramentas.html" class="logo">
+        <img src="/IMG/logo.png" alt="Logo do Acessa Dev">
+    </a>
+    <nav class="navbar" aria-label="Navegação principal">
+        <button class="menu-toggle" 
+                id="menu-toggle" 
+                aria-expanded="false" 
+                aria-controls="nav-list" 
+                aria-label="Abrir menu hamburger">
+
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./Guias.html">Guias</a></li>
+            <li><a href="#">Ferramentas</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="contrast-cool" aria-labelledby="contraste-titulo">
+        <div class="container">
+        <!-- ================================
+             CABEÇALHO
+        ================================= -->
+
+        <h1 id="contraste-titulo">
+            Verificador de Contraste
+            de Cores WCAG
+        </h1>
+        <p>
+            Verifique se a combinação de cores
+            do seu projeto está em conformidade
+            com as diretrizes WCAG 2.2.
+        </p>
+
+
+        <!-- ================================
+             CONFIGURAÇÃO DAS CORES
+        ================================= -->
+        <section class="contrast-colors" aria-labelledby="colors-title">
+            <h2 id="colors-title">
+                Cores
+            </h2>
+            <div class="color-fields">
+                <!-- COR DO TEXTO -->
+                <div class="color-field">
+                    <label for="text-color">
+                        Cor do texto
+                    </label>
+
+                    <div class="color-control">
+                        <input
+                            type="color"
+                            id="text-color"
+                            value="#1A1A1A"
+                            aria-label="Selecionar cor do texto">
+
+                        <div class="hex-wrapper">
+                            <label for="text-hex" class="sr-only">
+                                Código hexadecimal
+                                da cor do texto
+                            </label>
+
+                            <input
+                                type="text"
+                                id="text-hex"
+                                value="#1A1A1A"
+                                maxlength="7"
+                                inputmode="text"
+                                autocomplete="off"
+                                spellcheck="false"
+                                aria-describedby="text-error">
+
+                            <button
+                                type="button"
+                                class="copy-button"
+                                data-copy="text-hex"
+                                aria-label="Copiar código da cor do texto">
+                                <i class="bi bi-copy" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <span id="text-error" class="field-error" role="alert"></span>
+                </div>
+
+                <!-- COR DO FUNDO -->
+                <div class="color-field">
+                    <label for="background-color">
+                        Cor do fundo
+                    </label>
+
+                    <div class="color-control">
+                        <input
+                            type="color"
+                            id="background-color"
+                            value="#FFFFFF"
+                            aria-label="Selecionar cor do fundo">
+                        <div class="hex-wrapper">
+
+                            <label for="background-hex" class="sr-only">
+                                Código hexadecimal
+                                da cor do fundo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="background-hex"
+                                value="#FFFFFF"
+                                maxlength="7"
+                                inputmode="text"
+                                autocomplete="off"
+                                spellcheck="false"
+                                aria-describedby="background-error">
+
+                            <button
+                                type="button"
+                                class="copy-button"
+                                data-copy="background-hex"
+                                aria-label="Copiar código da cor do fundo">
+
+                                <i class="bi bi-copy" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <span id="background-error" class="field-error" role="alert"></span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================
+             TROCAR CORES
+        ================================= -->
+
+        <button
+            type="button"
+            id="swap-colors"
+            class="swap-button"
+            aria-label="Trocar as cores do texto e do fundo">
+
+            <i class="bi bi-arrow-down-up" aria-hidden="true"></i>
+
+            <span class="sr-only">
+                Trocar cores
+            </span>
+        </button>
+        <!-- ================================
+             RESULTADO
+        ================================= -->
+
+        <section class="contrast-result" aria-labelledby="result-title">
+            <h2 id="result-title">
+                Resultado
+            </h2>
+
+            <div class="contrast-score" aria-live="polite" aria-atomic="true">
+                <strong id="contrast-ratio">
+                    15.91:1
+                </strong>
+
+                <span id="contrast-level" class="level-badge">
+                    AAA
+                </span>
+            </div>
+
+            <h3 id="result-message">
+                Contraste excelente!
+            </h3>
+
+            <p id="result-description">
+                Essa combinação atende aos requisitos
+                WCAG 2.2 para todos os níveis.
+            </p>
+
+
+            <!-- RESULTADOS WCAG -->
+            <div class="wcag-results">
+
+                <!-- TEXTO NORMAL -->
+                <div class="wcag-row">
+                    <span>
+                        Texto normal
+                    </span>
+
+                    <div class="wcag-status">
+                        <span id="normal-aa" class="status">
+                            AA
+                        </span>
+
+                        <span id="normal-aaa" class="status">
+                            AAA
+                        </span>
+
+                        <i id="normal-check" class="bi bi-check-lg" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- TEXTO GRANDE -->
+                <div class="wcag-row">
+                    <span>
+                        Texto grande
+                        <small>
+                            (18pt ou 24px+)
+                        </small>
+                    </span>
+
+                    <div class="wcag-status">
+                        <span id="large-aa" class="status">
+                            AA
+                        </span>
+
+                        <span id="large-aaa" class="status">
+                            AAA
+                        </span>
+                        <i id="large-check" class="bi bi-check-lg" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- ELEMENTOS GRÁFICOS -->
+                <div class="wcag-row">
+                    <span>
+                        Elementos gráficos (UI)
+                    </span>
+
+                    <div class="wcag-status">
+                        <span id="ui-aa" class="status">
+                            AA
+                        </span>
+                        <i id="ui-check" class="bi bi-check-lg"aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETALHES TÉCNICOS -->
+            <details class="technical-details">
+                <summary>
+                    Ver detalhes técnicos
+                </summary>
+
+                <div class="technical-content">
+                    <p>
+                        A razão de contraste é calculada
+                        de acordo com o algoritmo definido
+                        pela WCAG.
+                    </p>
+
+                    <p><strong>Texto normal:</strong>
+                        mínimo de 4.5:1 para AA
+                        e 7:1 para AAA.
+                    </p>
+                    <p><strong>Texto grande:</strong>
+                        mínimo de 3:1 para AA
+                        e 4.5:1 para AAA.
+                    </p>
+                    <p><strong>Elementos gráficos:</strong>
+                        mínimo de 3:1.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+    <!-- ================================
+        PRÉ-VISUALIZAÇÃO
+    ================================= -->
+
+        <section class="contrast-preview" aria-labelledby="preview-title">
+            <h2 id="preview-title">
+                Pré-visualização
+            </h2>
+
+            <div id="preview" class="preview-box">
+                <h3>Texto de exemplo</h3>
+                <p>Exemplo de texto para você visualizar
+                    o contraste entre as cores escolhidas.
+                </p>
+            </div>
+        </section>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="/IMG/logo-branco.png" alt="">
+    </div>
+
+    <div class="footer-descricao">
+        <p> Ferramentas, guias e componentes para ajudar
+            desenvolvedores a criarem experiências digitais
+            mais acessíveis.
+        </p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Ferramentas</a></li>
+            <li><a href="#">Guias</a></li>
+            <li><a href="#">Componentes</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="footer-copy">
+        <p>© 2026 AcessaDev.</p>
+    </div>
+
+</footer>
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Acessa Dev</title>
+</head>
+<body>
+<header>
+    <a href="#" class="logo">
+        <img src="/IMG/logo.png" alt="Logo do Acessa Dev">
+    </a>
+    <nav class="navbar" aria-label="Navegação principal">
+        <button class="menu-toggle" 
+                id="menu-toggle" 
+                aria-expanded="false" 
+                aria-controls="nav-list" 
+                aria-label="Abrir menu hamburger">
+
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+            <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#">Início</a></li>
+            <li><a href="./Guias.html">Guias</a></li>
+            <li><a href="./ferramentas.html">Ferramentas</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+</header>
+    
+<main>
+    <section class="secao-principal" aria-labelledby="secao-principal">
+        
+        <h1> Acessibilidade digital começa com <span>boas escolhas</span></h1>
+        <p>Aprenda, valide e desenvolva interfaces acessíveis seguindo todos os critérios e recomendações
+            da WCAG
+        </p>
+
+        <div class="img-decorativa" aria-hidden="true" >
+            <img src="/IMG/ILUSTRATIVO.png" alt="">
+        </div>
+
+        <a href="#" class="botao-comecar">
+            Começar agora 
+            <i class="bi bi-arrow-right"></i>
+        </a>
+
+        <a href="#" class="botao-projeto">
+            Conheça o projeto
+            <i class="bi bi-info-circle"></i>
+        </a>
+    </section>
+
+    <section class="acessibilidade" aria-labelledby="titulo-acessibilidade">
+
+        <h2 id="titulo-acessibilidade">Por que a acessibilidade importa?</h2>
+
+        <div class="container-acessibilidade">
+            <div class="acessibilidade-item">
+                <div class="acessibilidade-icone" aria-hidden="true">
+                    <i class="bi bi-people"></i>
+                </div>
+
+                <div class="acessibilidade-conteudo">
+                    <h3>Inclusão de verdade</h3>
+                    <p>
+                        Acessibilidade garante que todas as pessoas,
+                        independentemente de suas habilidades,
+                        possam usar produtos digitais.
+                    </p>
+                </div>
+        </div>
+
+        <div class="acessibilidade-item">
+            <div class="acessibilidade-icone" aria-hidden="true">
+                <i class="bi bi-shield-check"></i>
+            </div>
+
+            <div class="acessibilidade-conteudo">
+                <h3>Conformidade</h3>
+                <p>
+                    Atenda às diretrizes da WCAG 2.2,
+                    evite problemas legais e esteja
+                    alinhado às melhores práticas.
+                </p>
+            </div>
+        </div>
+
+        <div class="acessibilidade-item">
+            <div class="acessibilidade-icone" aria-hidden="true">
+                <i class="bi bi-heart"></i>
+            </div>
+            <div class="acessibilidade-conteudo">
+                <h3>Melhor experiência</h3>
+                <p>
+                    Sites e aplicações acessíveis são
+                    mais intuitivos, usáveis e agradáveis
+                    para todas as pessoas.
+                </p>
+            </div>
+        </div>
+
+        <div class="acessibilidade-item">
+            <div class="acessibilidade-icone" aria-hidden="true">
+                <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <div class="acessibilidade-conteudo">
+                <h3>Impacto positivo</h3>
+                <p>
+                    Acessibilidade aumenta o alcance,
+                    melhora o engajamento e fortalece
+                    a reputação da sua marca.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="diferencial-card" aria-labelledby="titulo-diferencial-card">
+    <h2>Acesibilidade não é um diferencial.</h2>
+    <p>Ela é o mínimo para um mundo que queremos construir.
+        <br><br>
+        Nosso canal no Youtube ensina desenvolvedores a incluir Acessibilidade em seus projetos
+    </p>
+
+    <div class="img-diferencial" aria-hidden="true">
+        <img src="/IMG/diferencial.png" alt="">
+    </div>
+
+    <a href="https://www.youtube.com/@dev.sem.barreiras" class="botao-diferencial">
+        Faça parte do canal
+    </a>
+</section>
+
+<section class="recursos" aria-labelledby="titulo-recursos">
+    <span class="tag">Tudo em um único lugar</span>
+        <h2 class="título recurso">Ferramentas, guias e checklists para apoiar você em cada etapa</h2>
+
+    <div class="recursos-lista">
+        <a href="/ferramentas.html" class="recurso-card">
+            <div class="recurso-icone" aria-hidden="true">
+                 <i class="bi bi-book"></i>
+            </div>
+
+            <div class="recurso-conteudo">
+                <h3>Ferramentas</h3>
+
+                <p>
+                    Verifique contraste, tamanhos, ALT,
+                    navegação e muito mais.
+                </p>
+            </div>
+
+             <i class="bi bi-chevron-right seta" aria-hidden="true"></i>
+        </a>
+
+        <a href="#" class="recurso-card">
+            <div class="recurso-icone" aria-hidden="true">
+                <i class="bi bi-journal-code"></i>
+            </div>
+
+            <div class="recurso-conteudo">
+                <h3>Guias e conteúdos</h3>
+
+                <p>Aprenda com exemplos reaise explicações objetivas.</p>
+            </div>
+            <i class="bi bi-chevron-right seta" aria-hidden="true"></i>
+        </a>
+
+        <a href="#" class="recurso-card">
+            <div class="recurso-icone" aria-hidden="true">
+                <i class="bi bi-check2-square"></i>
+            </div>
+
+            <div class="recurso-conteudo">
+                <h3>Checklists</h3>
+
+                <p>Siga checklists e boas práticas completos e nunca esqueça nada.</p>
+            </div>
+
+            <i class="bi bi-chevron-right seta" aria-hidden="true"></i>
+        </a>
+
+        <div class="decoração" aria-hidden="true">
+            <img src="/IMG/decoração.png" alt="">
+        </div>
+
+    </div>
+</section>
+
+<section class="passos" aria-labelledby="Título passos">
+    <span class="tag">Acessibilidade Digital</span>
+
+    <h2>Um passo a passo para projetos mais acessíveis</h2>
+
+    <div passos-lista>
+        <article class="passo">
+            <div class="passo-icone">
+                <span class="numero">1</span>
+            </div>
+            <div class="passo-conteudo">
+                <h3>Aprenda</h3>
+                    
+                <p>Entenda os conceitos e diretrizes de acessibilidade
+                    com nossos guias.
+                </p>
+            </div>
+        </article>
+
+        <article class="passo">
+            <div class="passo-icone">
+                <span class="numero">2</span>
+            </div>
+            <div class="passo-conteudo">
+                <h3>Implemente</h3>
+                    
+                <p>Use componentes acessíveis
+                    e siga exemplos práticos.
+                    </p>
+            </div>
+        </article>
+
+        <article class="passo">
+            <div class="passo-icone">
+                <span class="numero">3</span>
+            </div>
+            <div class="passo-conteudo">
+                <h3>valide</h3>
+                    
+                <p>Teste, valide e corrija
+                    usando nossas ferramentas.
+                    </p>
+            </div>
+        </article>
+
+        <article class="passo">
+            <div class="passo-icone">
+                <span class="numero">4</span>
+            </div>
+            <div class="passo-conteudo">
+                <h3>Publique</h3>
+                    
+                <p>Entregue experiências acessíveis
+                    para todas as pessoas.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="/IMG/logo-branco.png" alt="">
+    </div>
+
+    <div class="footer-descricao">
+        <p> Ferramentas, guias e componentes para ajudar
+            desenvolvedores a criarem experiências digitais
+            mais acessíveis.
+        </p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Links do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Ferramentas</a></li>
+            <li><a href="#">Guias</a></li>
+            <li><a href="#">Componentes</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <div class="footer-copy">
+        <p>© 2026 AcessaDev.</p>
+    </div>
+
+</footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
