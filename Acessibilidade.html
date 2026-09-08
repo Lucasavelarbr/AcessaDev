@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./Acessibilidade.css">
+
+    <title>Acessibilidade digital | Acessa Dev</title>
+</head>
+<body>
+    <header>
+        <a href="./ferramentas.html" class="logo">
+            <img src="./IMG/logo.png" alt="Logo do Acessa Dev">
+        </a>
+
+        <nav class="navbar" aria-label="Navegação principal">
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="accessibility-guide-page">
+        <article class="accessibility-guide-content">
+            <header class="accessibility-guide-header">
+                <span class="accessibility-guide-category">
+                    <i class="bi bi-book" aria-hidden="true"></i>
+                    Fundamentos
+                </span>
+
+                <h1>O que é acessibilidade digital?</h1>
+
+                <p class="accessibility-guide-introduction">
+                    Entenda os princípios, benefícios e impactos da acessibilidade na inclusão digital.
+                </p>
+
+                <span class="accessibility-guide-reading-time">
+                    <i class="bi bi-clock" aria-hidden="true"></i>
+                    8 min de leitura
+                </span>
+            </header>
+
+            <aside class="accessibility-guide-summary" aria-labelledby="accessibility-summary-title">
+                <h2 id="accessibility-summary-title">Nesta página você vai ver:</h2>
+
+                <ul>
+                    <li>O que é acessibilidade digital</li>
+                    <li>Por que ela é importante</li>
+                    <li>Quem se beneficia</li>
+                    <li>Princípios da acessibilidade</li>
+                    <li>Exemplos práticos</li>
+                </ul>
+            </aside>
+
+            <section class="accessibility-guide-section" aria-labelledby="accessibility-o-que-e">
+                <div class="accessibility-guide-section-heading">
+                    <h2 id="accessibility-o-que-e">O que é acessibilidade digital?</h2>
+                </div>
+
+                <p>
+                    Acessibilidade digital é a prática de criar produtos, serviços e conteúdos digitais que possam ser utilizados por todas as pessoas, independentemente de suas habilidades ou limitações.
+                </p>
+
+                <p>
+                    Isso significa remover barreiras que podem impedir que usuários interajam, compreendam ou naveguem em sites, aplicativos e outras tecnologias.
+                </p>
+            </section>
+
+            <section class="accessibility-guide-section" aria-labelledby="accessibility-importancia">
+                <div class="accessibility-guide-section-heading">
+                    <h2 id="accessibility-importancia">Por que ela é importante?</h2>
+                </div>
+
+                <p>
+                    A acessibilidade vai muito além de cumprir leis ou normas. Ela gera impacto real na experiência das pessoas e permite que mais usuários tenham acesso à informação e aos serviços digitais.
+                </p>
+
+                <div class="accessibility-guide-benefits">
+                    <article class="accessibility-guide-benefit-card">
+                        <i class="bi bi-people" aria-hidden="true"></i>
+                        <h3>Inclusão</h3>
+                        <p>Permite que todas as pessoas tenham acesso à informação e aos serviços.</p>
+                    </article>
+
+                    <article class="accessibility-guide-benefit-card">
+                        <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                        <h3>Alcance</h3>
+                        <p>Você alcança mais usuários e melhora a experiência de todo mundo.</p>
+                    </article>
+
+                    <article class="accessibility-guide-benefit-card">
+                        <i class="bi bi-shield-check" aria-hidden="true"></i>
+                        <h3>Responsabilidade</h3>
+                        <p>É uma prática ética que promove igualdade e respeito à diversidade.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="accessibility-guide-section" aria-labelledby="accessibility-beneficiados">
+                <div class="accessibility-guide-section-heading">
+                    <h2 id="accessibility-beneficiados">Quem se beneficia?</h2>
+                </div>
+
+                <p>
+                    A acessibilidade beneficia principalmente pessoas com diferentes tipos de deficiência, como:
+                </p>
+
+                <ul class="accessibility-guide-types">
+                    <li><i class="bi bi-eye" aria-hidden="true"></i>Visual</li>
+                    <li><i class="bi bi-ear" aria-hidden="true"></i>Auditiva</li>
+                    <li><i class="bi bi-hand-index" aria-hidden="true"></i>Motora</li>
+                    <li><i class="bi bi-headphones" aria-hidden="true"></i>Cognitiva</li>
+                    <li><i class="bi bi-person" aria-hidden="true"></i>Múltipla</li>
+                </ul>
+
+                <p>
+                    Mas ela também ajuda idosos, pessoas em ambientes com pouca luz, usuários com conexões lentas e qualquer pessoa em situações temporárias de limitação.
+                </p>
+            </section>
+
+            <aside class="accessibility-guide-highlight">
+                <i class="bi bi-lightbulb" aria-hidden="true"></i>
+
+                <div>
+                    <strong>Dica:</strong>
+                    <p>Seus projetos podem e devem ser bons para <strong>todas as pessoas</strong>, em todos os momentos.</p>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer" id="sobre">
+        <div class="footer-logo">
+            <img src="./IMG/logo-branco.png" alt="Acessa Dev">
+        </div>
+
+        <div class="footer-descricao">
+            <p>Ferramentas, guias e componentes para ajudar desenvolvedores a criarem experiências digitais mais acessíveis.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-copy">
+            <p>© 2026 Acessa Dev.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

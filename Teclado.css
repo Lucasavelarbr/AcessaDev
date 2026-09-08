@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background: #ffffff;
+    --botoes: #4920b4;
+    --texto: #000000;
+    --texto-secundario: #2f2e2e;
+    --roxo-claro: #f4f0ff;
+    --roxo-destaque: #dfd7f7;
+    --roxo-focus: #5b2eff;
+    --codigo-fundo: #1e1e1e;
+    --codigo-texto: #d4d4d4;
+    --codigo-tag: #c6a7ff;
+    --codigo-atributo: #8fd3ff;
+    --codigo-valor: #a8e6cf;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Inter", sans-serif;
+}
+
+.logo img {
+    width: 60%;
+    height: auto;
+    display: block;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    z-index: 5;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 4;
+    background-color: var(--background);
+}
+
+.menu-toggle {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.menu-toggle::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+}
+
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--roxo-focus);
+    outline-offset: 6px;
+    border-radius: 16px;
+}
+
+.menu-toggle .bar {
+    width: 80%;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    transition: all .5s ease-in-out;
+    transform-origin: center;
+    display: block;
+    background-color: var(--botoes);
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.nav-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 70dvh;
+    list-style-type: none;
+    background-color: var(--background);
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 0 20px -10px black;
+    border-radius: 10px;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+.nav-list li {
+    margin: 20px;
+    padding-top: 60px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-list a:focus-visible {
+    outline: 3px solid var(--roxo-focus);
+    outline-offset: 6px;
+    border-radius: 16px;
+}
+
+/* PÁGINA */
+.keyboard-guide-page {
+    width: 100%;
+    padding: 7rem 1rem 4rem;
+}
+
+.keyboard-guide-content {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* CABEÇALHO */
+.keyboard-guide-header {
+    margin-bottom: 2.5rem;
+}
+
+.keyboard-guide-category {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .75rem;
+    padding: .65rem .8rem;
+    background-color: var(--roxo-claro);
+    color: var(--botoes);
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.keyboard-guide-category i {
+    font-size: 1.3rem;
+}
+
+.keyboard-guide-header h1 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: var(--texto);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.keyboard-guide-introduction {
+    margin-bottom: 1.25rem;
+    margin-left: 1rem;
+    color: var(--codigo-fundo);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.keyboard-guide-reading-time {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin-left: 1rem;
+    color: var(--codigo-fundo);
+    font-size: 1rem;
+}
+
+.keyboard-guide-reading-time i {
+    color: var(--botoes);
+}
+
+/* RESUMO */
+.keyboard-guide-summary {
+    margin-bottom: 3rem;
+    padding: 1.25rem;
+}
+
+.keyboard-guide-summary h2 {
+    margin-bottom: 1rem;
+    color: var(--botoes);
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.keyboard-guide-summary ul {
+    padding-left: 1.2rem;
+}
+
+.keyboard-guide-summary li {
+    margin-bottom: .75rem;
+    color: var(--texto);
+    font-size: .95rem;
+    line-height: 1;
+}
+
+.keyboard-guide-summary li:last-child {
+    margin-bottom: 0;
+}
+
+.keyboard-guide-summary li::marker {
+    color: var(--botoes);
+}
+
+/* SEÇÕES */
+.keyboard-guide-section {
+    margin-bottom: 3rem;
+}
+
+.keyboard-guide-section-heading {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 1.25rem;
+}
+
+.keyboard-guide-section-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--roxo-claro);
+    color: var(--botoes);
+    border-radius: 8px;
+    font-size: 1.4rem;
+}
+
+.keyboard-guide-section-heading h2 {
+    color: var(--botoes);
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.keyboard-guide-section > p {
+    margin-bottom: 1rem;
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.7;
+    hyphens: auto;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.keyboard-guide-section > p:last-child {
+    margin-bottom: 0;
+}
+
+.keyboard-guide-section p code {
+    padding: .15rem .35rem;
+    background-color: var(--roxo-claro);
+    color: var(--botoes);
+    border-radius: 4px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: .9em;
+}
+
+/* TECLAS */
+.keyboard-guide-keys {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.keyboard-guide-key-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.1rem;
+    border: 1px solid var(--roxo-destaque);
+    border-radius: 10px;
+    background-color: var(--background);
+}
+
+.keyboard-guide-key-card kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: .55rem .65rem;
+    background-color: var(--roxo-claro);
+    color: var(--botoes);
+    border: 1px solid var(--roxo-destaque);
+    border-bottom: 3px solid var(--roxo-destaque);
+    border-radius: 6px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.keyboard-guide-key-card h3 {
+    margin-bottom: .3rem;
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+.keyboard-guide-key-card p {
+    color: var(--texto-secundario);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+/* EXEMPLOS DE CÓDIGO */
+.keyboard-guide-code {
+    width: 100%;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    background-color: var(--codigo-fundo);
+    border: 1px solid #333333;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+
+.keyboard-guide-code-header {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 .9rem;
+    background-color: #252526;
+    border-bottom: 1px solid #333333;
+    color: var(--codigo-texto);
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.keyboard-guide-code pre {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    overflow: hidden;
+    color: var(--codigo-texto);
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: .78rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    tab-size: 2;
+}
+
+.keyboard-guide-code code {
+    display: block;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: inherit;
+}
+
+.code-tag {
+    color: var(--codigo-tag);
+}
+
+.code-attribute {
+    color: var(--codigo-atributo);
+}
+
+.code-value {
+    color: var(--codigo-valor);
+}
+
+.keyboard-guide-code-comparison {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.keyboard-guide-code-comparison .keyboard-guide-code {
+    margin: 0;
+}
+
+/* DESTAQUE FINAL */
+.keyboard-guide-highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: -5rem;
+    padding: 1.25rem;
+    background-color: var(--roxo-claro);
+    border-radius: 10px;
+    box-shadow: 0 0 20px -12px var(--texto);
+}
+
+.keyboard-guide-highlight > i {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--botoes);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.keyboard-guide-highlight strong {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--botoes);
+    font-size: 1.2rem;
+}
+
+.keyboard-guide-highlight p {
+    color: var(--texto);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 5rem;
+    padding: 2rem 1.6rem;
+    background-color: #290996;
+    color: #ffffff;
+    border-radius: 24px 24px 0 0;
+}
+
+.footer-logo img {
+    width: 60%;
+    margin-left: .3rem;
+}
+
+.footer-descricao p {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.footer-nav {
+    margin-bottom: 3rem;
+}
+
+.footer-nav h3 {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.footer-nav a {
+    color: var(--background);
+    font-size: 1.3rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-nav a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.footer-copy {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* REDUÇÃO DE MOVIMENTO */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./Teclado.css">
+
+    <title>Acessibilidade digital | Acessa Dev</title>
+</head>
+<body>
+    <header>
+        <a href="./ferramentas.html" class="logo">
+            <img src="./IMG/logo.png" alt="Logo do Acessa Dev">
+        </a>
+
+        <nav class="navbar" aria-label="Navegação principal">
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="keyboard-guide-page">
+        <article class="keyboard-guide-content">
+            <header class="keyboard-guide-header">
+                <p class="keyboard-guide-category">
+                    <i class="bi bi-keyboard" aria-hidden="true"></i>
+                    Navegação
+                </p>
+
+                <h1>Navegação por teclado</h1>
+
+                <p class="keyboard-guide-introduction">Descubra como tornar seu site totalmente navegável sem utilizar o mouse.</p>
+
+                <p class="keyboard-guide-reading-time">
+                    <i class="bi bi-clock" aria-hidden="true"></i>
+                    9 min de leitura
+                </p>
+            </header>
+
+            <aside class="keyboard-guide-summary" aria-labelledby="keyboard-summary-title">
+                <h2 id="keyboard-summary-title">Nesta página você vai aprender:</h2>
+
+                <ul>
+                    <li>Por que a navegação por teclado é importante</li>
+                    <li>Como funciona a tecla Tab</li>
+                    <li>Como criar um foco visível</li>
+                    <li>Quando usar links e botões</li>
+                    <li>Como criar um link para pular ao conteúdo</li>
+                </ul>
+            </aside>
+
+            <section class="keyboard-guide-section" aria-labelledby="keyboard-importancia">
+                <div class="keyboard-guide-section-heading">
+                    <div class="keyboard-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-universal-access"></i>
+                    </div>
+
+                    <h2 id="keyboard-importancia">Por que a navegação por teclado importa?</h2>
+                </div>
+
+                <p>Muitas pessoas utilizam o teclado para navegar na internet, incluindo pessoas com deficiência motora, pessoas cegas e usuários que preferem não utilizar o mouse.</p>
+
+                <p>Uma interface acessível permite que todos os elementos importantes possam ser encontrados, compreendidos e acionados apenas com o teclado.</p>
+            </section>
+
+            <section class="keyboard-guide-section" aria-labelledby="keyboard-teclas">
+                <div class="keyboard-guide-section-heading">
+                    <div class="keyboard-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-command"></i>
+                    </div>
+
+                    <h2 id="keyboard-teclas">Teclas mais importantes</h2>
+                </div>
+
+                <div class="keyboard-guide-keys">
+                    <article class="keyboard-guide-key-card">
+                        <kbd>Tab</kbd>
+                        <div>
+                            <h3>Avançar</h3>
+                            <p>Move o foco para o próximo elemento interativo.</p>
+                        </div>
+                    </article>
+
+                    <article class="keyboard-guide-key-card">
+                        <kbd>Shift + Tab</kbd>
+                        <div>
+                            <h3>Voltar</h3>
+                            <p>Move o foco para o elemento interativo anterior.</p>
+                        </div>
+                    </article>
+
+                    <article class="keyboard-guide-key-card">
+                        <kbd>Enter</kbd>
+                        <div>
+                            <h3>Ativar</h3>
+                            <p>Abre links e ativa botões que estão em foco.</p>
+                        </div>
+                    </article>
+
+                    <article class="keyboard-guide-key-card">
+                        <kbd>Espaço</kbd>
+                        <div>
+                            <h3>Acionar botão</h3>
+                            <p>Ativa botões, caixas de seleção e outros controles.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="keyboard-guide-section" aria-labelledby="keyboard-foco">
+                <div class="keyboard-guide-section-heading">
+                    <div class="keyboard-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+
+                    <h2 id="keyboard-foco">Nunca esconda o foco</h2>
+                </div>
+
+                <p>Ao navegar com a tecla Tab, o usuário precisa enxergar claramente qual elemento está selecionado. Remover o foco sem oferecer uma alternativa cria uma barreira de navegação.</p>
+
+                <figure class="keyboard-guide-code">
+                    <figcaption class="keyboard-guide-code-header"><span>CSS recomendado</span></figcaption>
+                    <pre><code><span class="code-tag">a</span><span class="code-tag">:focus-visible</span><span class="code-tag">,</span>
+<span class="code-tag">button</span><span class="code-tag">:focus-visible</span> <span class="code-tag">{</span>
+    <span class="code-attribute">outline</span><span class="code-tag">:</span> <span class="code-value">3px solid #5b2eff</span><span class="code-tag">;</span>
+    <span class="code-attribute">outline-offset</span><span class="code-tag">:</span> <span class="code-value">4px</span><span class="code-tag">;</span>
+<span class="code-tag">}</span></code></pre>
+                </figure>
+            </section>
+
+            <section class="keyboard-guide-section" aria-labelledby="keyboard-botoes">
+                <div class="keyboard-guide-section-heading">
+                    <div class="keyboard-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-cursor"></i>
+                    </div>
+
+                    <h2 id="keyboard-botoes">Use o elemento certo</h2>
+                </div>
+
+                <p>Elementos nativos já funcionam com o teclado. Um <code>button</code> pode ser ativado com Enter e Espaço, enquanto uma <code>div</code> não possui esse comportamento automaticamente.</p>
+
+                <div class="keyboard-guide-code-comparison">
+                    <figure class="keyboard-guide-code">
+                        <figcaption class="keyboard-guide-code-header"><span>Evite</span></figcaption>
+                        <pre><code><span class="code-tag">&lt;div</span> <span class="code-attribute">onclick</span>=<span class="code-value">"enviarFormulario()"</span><span class="code-tag">&gt;</span>
+    Enviar
+<span class="code-tag">&lt;/div&gt;</span></code></pre>
+                    </figure>
+
+                    <figure class="keyboard-guide-code">
+                        <figcaption class="keyboard-guide-code-header"><span>Prefira</span></figcaption>
+                        <pre><code><span class="code-tag">&lt;button</span> <span class="code-attribute">type</span>=<span class="code-value">"submit"</span><span class="code-tag">&gt;</span>
+    Enviar
+<span class="code-tag">&lt;/button&gt;</span></code></pre>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="keyboard-guide-section" aria-labelledby="keyboard-pular">
+                <div class="keyboard-guide-section-heading">
+                    <div class="keyboard-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-skip-forward"></i>
+                    </div>
+
+                    <h2 id="keyboard-pular">Ofereça um atalho para o conteúdo</h2>
+                </div>
+
+                <p>O link “Pular para o conteúdo” aparece quando recebe foco. Ele evita que pessoas que usam teclado precisem atravessar todo o menu em todas as páginas.</p>
+
+                <figure class="keyboard-guide-code">
+                    <figcaption class="keyboard-guide-code-header"><span>HTML</span></figcaption>
+                    <pre><code><span class="code-tag">&lt;a</span> <span class="code-attribute">href</span>=<span class="code-value">"#conteudo-principal"</span> <span class="code-attribute">class</span>=<span class="code-value">"skip-link"</span><span class="code-tag">&gt;</span>
+    Pular para o conteúdo
+<span class="code-tag">&lt;/a&gt;</span>
+
+<span class="code-tag">&lt;main</span> <span class="code-attribute">id</span>=<span class="code-value">"conteudo-principal"</span><span class="code-tag">&gt;</span>
+    ...
+<span class="code-tag">&lt;/main&gt;</span></code></pre>
+                </figure>
+            </section>
+
+            <aside class="keyboard-guide-highlight">
+                <i class="bi bi-lightbulb" aria-hidden="true"></i>
+
+                <div>
+                    <strong>Teste seu próprio site</strong>
+                    <p>Coloque o mouse de lado e pressione Tab. Se você não conseguir chegar a todos os controles ou não enxergar o foco, existe uma barreira a ser corrigida.</p>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+
+    <!-- footer -->
+   <footer class="footer" id="sobre">
+        <div class="footer-logo">
+            <img src="./IMG/logo-branco.png" alt="Acessa Dev">
+        </div>
+
+        <div class="footer-descricao">
+            <p>Ferramentas, guias e componentes para ajudar desenvolvedores a criarem experiências digitais mais acessíveis.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-copy">
+            <p>© 2026 Acessa Dev.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

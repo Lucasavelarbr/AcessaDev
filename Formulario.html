@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./Formulario.css">
+
+    <title>Formulários acessíveis | Acessa Dev</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">
+            <img src="./IMG/logo.png" alt="Logo do Acessa Dev">
+        </a>
+
+        <nav class="navbar" aria-label="Navegação principal">
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-page">
+        <article class="form-content">
+            <header class="article-header">
+                <p class="article-category">
+                    <i class="bi bi-input-cursor-text" aria-hidden="true"></i>
+                    Formulários
+                </p>
+
+                <h1>Formulários acessíveis</h1>
+
+                <p class="article-introduction">Aprenda a construir formulários intuitivos, acessíveis e compatíveis com leitores de tela.</p>
+
+                <p class="reading-time">
+                    <i class="bi bi-clock" aria-hidden="true"></i>
+                    11 min de leitura
+                </p>
+            </header>
+
+            <aside class="article-summary" aria-labelledby="summary-title">
+                <h2 id="summary-title">Nesta página você vai aprender:</h2>
+
+                <ul>
+                    <li>Como utilizar labels corretamente</li>
+                    <li>Como criar campos obrigatórios</li>
+                    <li>Como trabalhar com mensagens de erro</li>
+                    <li>Como agrupar campos relacionados</li>
+                    <li>Como melhorar a navegação por teclado</li>
+                </ul>
+            </aside>
+
+            <section class="article-section" aria-labelledby="labels">
+                <div class="section-heading">
+                    <div class="section-icon" aria-hidden="true">
+                        <i class="bi bi-tag"></i>
+                    </div>
+
+                    <h2 id="labels">Use labels corretamente</h2>
+                </div>
+
+                <p>Todo campo de formulário deve possuir uma identificação clara para que o usuário saiba qual informação deve ser preenchida.</p>
+
+                <p>A forma mais adequada é utilizar o elemento <code>&lt;label&gt;</code> associado ao campo.</p>
+            </section>
+
+            <section class="code-example" aria-labelledby="label-example">
+                <h3 id="label-example">Exemplo acessível</h3>
+
+                <pre><code><span class="code-tag">&lt;label</span> <span class="code-attribute">for</span>=<span class="code-value">"email"</span><span class="code-tag">&gt;</span>E-mail<span class="code-tag">&lt;/label&gt;</span>
+
+<span class="code-tag">&lt;input</span> <span class="code-attribute">type</span>=<span class="code-value">"email"</span> <span class="code-attribute">id</span>=<span class="code-value">"email"</span> <span class="code-attribute">name</span>=<span class="code-value">"email"</span><span class="code-tag">&gt;</span></code></pre>
+            </section>
+
+            <section class="article-section" aria-labelledby="required">
+                <div class="section-heading">
+                    <div class="section-icon" aria-hidden="true">
+                        <i class="bi bi-asterisk"></i>
+                    </div>
+
+                    <h2 id="required">Indique campos obrigatórios</h2>
+                </div>
+
+                <p>Quando uma informação é obrigatória, isso precisa estar claro para todas as pessoas, inclusive para quem utiliza tecnologias assistivas.</p>
+            </section>
+
+            <section class="code-example" aria-labelledby="required-example">
+                <h3 id="required-example">Exemplo</h3>
+
+                <pre><code><span class="code-tag">&lt;label</span> <span class="code-attribute">for</span>=<span class="code-value">"nome"</span><span class="code-tag">&gt;</span>Nome completo<span class="code-tag">&lt;/label&gt;</span>
+
+<span class="code-tag">&lt;input</span> <span class="code-attribute">type</span>=<span class="code-value">"text"</span> <span class="code-attribute">id</span>=<span class="code-value">"nome"</span> <span class="code-attribute">name</span>=<span class="code-value">"nome"</span> <span class="code-attribute">required</span><span class="code-tag">&gt;</span></code></pre>
+            </section>
+
+            <section class="article-section" aria-labelledby="errors">
+                <div class="section-heading">
+                    <div class="section-icon" aria-hidden="true">
+                        <i class="bi bi-exclamation-circle"></i>
+                    </div>
+
+                    <h2 id="errors">Mensagens de erro</h2>
+                </div>
+
+                <p>Mensagens de erro devem explicar claramente o que aconteceu e, principalmente, como o usuário pode corrigir o problema.</p>
+            </section>
+
+            <section class="code-example" aria-labelledby="error-example">
+                <h3 id="error-example">Exemplo</h3>
+
+                <pre><code><span class="code-tag">&lt;label</span> <span class="code-attribute">for</span>=<span class="code-value">"email"</span><span class="code-tag">&gt;</span>E-mail<span class="code-tag">&lt;/label&gt;</span>
+
+<span class="code-tag">&lt;input</span> <span class="code-attribute">type</span>=<span class="code-value">"email"</span> <span class="code-attribute">id</span>=<span class="code-value">"email"</span> <span class="code-attribute">aria-describedby</span>=<span class="code-value">"email-error"</span> <span class="code-attribute">aria-invalid</span>=<span class="code-value">"true"</span><span class="code-tag">&gt;</span>
+
+<span class="code-tag">&lt;span</span> <span class="code-attribute">id</span>=<span class="code-value">"email-error"</span><span class="code-tag">&gt;</span>Informe um endereço de e-mail válido.<span class="code-tag">&lt;/span&gt;</span></code></pre>
+            </section>
+
+            <section class="article-section" aria-labelledby="keyboard">
+                <div class="section-heading">
+                    <div class="section-icon" aria-hidden="true">
+                        <i class="bi bi-keyboard"></i>
+                    </div>
+
+                    <h2 id="keyboard">Pense na navegação por teclado</h2>
+                </div>
+
+                <p>Todos os campos e controles devem poder ser acessados utilizando apenas o teclado.</p>
+
+                <p>A ordem de navegação também precisa fazer sentido para quem está utilizando a interface.</p>
+            </section>
+
+            <aside class="article-highlight">
+                <i class="bi bi-lightbulb" aria-hidden="true"></i>
+
+                <div>
+                    <strong>Pense assim</strong>
+                    <p>Se uma pessoa consegue preencher seu formulário utilizando apenas o teclado e um leitor de tela, você está no caminho certo.</p>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer" id="sobre">
+        <div class="footer-logo">
+            <img src="./IMG/logo-branco.png" alt="Acessa Dev">
+        </div>
+
+        <div class="footer-descricao">
+            <p>Ferramentas, guias e componentes para ajudar desenvolvedores a criarem experiências digitais mais acessíveis.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-copy">
+            <p>© 2026 Acessa Dev.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

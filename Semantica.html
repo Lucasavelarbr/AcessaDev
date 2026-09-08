@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./Semantica.css">
+
+    <title>HTML semântico | Acessa Dev</title>
+</head>
+<body>
+    <header>
+        <a href="./index.html" class="logo">
+            <img src="./IMG/logo.png" alt="Logo do Acessa Dev">
+        </a>
+
+        <nav class="navbar" aria-label="Navegação principal">
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
+
+            <ul class="nav-list" id="nav-list">
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="semantic-guide-page">
+        <article class="semantic-guide-content">
+            <header class="semantic-guide-header">
+                <p class="semantic-guide-category">
+                    <i class="bi bi-code-slash" aria-hidden="true"></i>
+                    HTML
+                </p>
+
+                <h1>HTML semântico do básico ao avançado</h1>
+
+                <p class="semantic-guide-introduction">Descubra como estruturar páginas acessíveis utilizando HTML5 semântico.</p>
+
+                <p class="semantic-guide-reading-time">
+                    <i class="bi bi-clock" aria-hidden="true"></i>
+                    10 min de leitura
+                </p>
+            </header>
+
+            <aside class="semantic-guide-summary" aria-labelledby="semantic-summary-title">
+                <h2 id="semantic-summary-title">Nesta página você vai ver:</h2>
+
+                <ul>
+                    <li>O que é HTML semântico</li>
+                    <li>Por que ele é importante</li>
+                    <li>Estrutura semântica de uma página</li>
+                    <li>Títulos e hierarquia</li>
+                    <li>Links e botões</li>
+                    <li>Formulários acessíveis</li>
+                    <li>Exemplos práticos</li>
+                </ul>
+            </aside>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-o-que-e">
+                <div class="semantic-guide-section-heading">
+                    <h2 id="semantic-o-que-e">O que é HTML semântico?</h2>
+                </div>
+
+                <p>HTML semântico é a utilização dos elementos HTML de acordo com o significado e a função que eles possuem na página.</p>
+
+                <p>Em vez de utilizar elementos genéricos para tudo, utilizamos elementos que descrevem claramente a função daquele conteúdo.</p>
+            </section>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-importancia">
+                <div class="semantic-guide-section-heading">
+                    <h2 id="semantic-importancia">Por que o HTML semântico é importante?</h2>
+                </div>
+
+                <p>Uma estrutura HTML bem definida facilita a navegação, melhora a compreensão do conteúdo e contribui para uma experiência mais acessível.</p>
+
+                <div class="semantic-guide-benefits">
+                    <article class="semantic-guide-benefit-card">
+                        <i class="bi bi-universal-access" aria-hidden="true"></i>
+                        <h3>Acessibilidade</h3>
+                        <p>Ajuda leitores de tela e outras tecnologias assistivas a compreender a estrutura da página.</p>
+                    </article>
+
+                    <article class="semantic-guide-benefit-card">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <h3>SEO</h3>
+                        <p>Uma estrutura bem organizada facilita a compreensão do conteúdo pelos mecanismos de busca.</p>
+                    </article>
+
+                    <article class="semantic-guide-benefit-card">
+                        <i class="bi bi-code-square" aria-hidden="true"></i>
+                        <h3>Manutenção</h3>
+                        <p>Código semântico tende a ser mais organizado e mais fácil de manter.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-estrutura">
+                <div class="semantic-guide-section-heading">
+                    <h2 id="semantic-estrutura">Estrutura semântica</h2>
+                </div>
+
+                <p>Uma página pode ser dividida em diferentes regiões utilizando elementos semânticos apropriados.</p>
+
+                <figure class="semantic-guide-code">
+                    <figcaption class="semantic-guide-code-header"><span>HTML</span></figcaption>
+                    <pre><code><span class="code-tag">&lt;header&gt;</span>
+    <span class="code-tag">&lt;nav&gt;</span>
+        ...
+    <span class="code-tag">&lt;/nav&gt;</span>
+<span class="code-tag">&lt;/header&gt;</span>
+
+<span class="code-tag">&lt;main&gt;</span>
+    <span class="code-tag">&lt;section&gt;</span>
+        <span class="code-tag">&lt;h1&gt;</span>Meu conteúdo<span class="code-tag">&lt;/h1&gt;</span>
+    <span class="code-tag">&lt;/section&gt;</span>
+<span class="code-tag">&lt;/main&gt;</span>
+
+<span class="code-tag">&lt;footer&gt;</span>
+    ...
+<span class="code-tag">&lt;/footer&gt;</span></code></pre>
+                </figure>
+
+                <p>Elementos como <code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code> e <code>footer</code> ajudam a representar a estrutura da página.</p>
+            </section>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-titulos">
+                <div class="semantic-guide-section-heading">
+                    <div class="semantic-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-type-h1"></i>
+                    </div>
+
+                    <h2 id="semantic-titulos">Títulos e hierarquia</h2>
+                </div>
+
+                <p>Os títulos devem representar a hierarquia do conteúdo da página.</p>
+
+                <figure class="semantic-guide-code">
+                    <figcaption class="semantic-guide-code-header"><span>HTML</span></figcaption>
+                    <pre><code><span class="code-tag">&lt;h1&gt;</span>Título principal<span class="code-tag">&lt;/h1&gt;</span>
+<span class="code-tag">&lt;h2&gt;</span>Primeira seção<span class="code-tag">&lt;/h2&gt;</span>
+<span class="code-tag">&lt;h3&gt;</span>Subseção<span class="code-tag">&lt;/h3&gt;</span>
+<span class="code-tag">&lt;h2&gt;</span>Segunda seção<span class="code-tag">&lt;/h2&gt;</span></code></pre>
+                </figure>
+            </section>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-formularios">
+                <div class="semantic-guide-section-heading">
+                    <div class="semantic-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-input-cursor-text"></i>
+                    </div>
+
+                    <h2 id="semantic-formularios">Formulários</h2>
+                </div>
+
+                <p>Elementos de formulário também precisam possuir uma estrutura que permita ao usuário compreender o propósito de cada campo.</p>
+
+                <figure class="semantic-guide-code">
+                    <figcaption class="semantic-guide-code-header"><span>HTML</span></figcaption>
+                    <pre><code><span class="code-tag">&lt;label</span> <span class="code-attribute">for</span>=<span class="code-value">"email"</span><span class="code-tag">&gt;</span>E-mail<span class="code-tag">&lt;/label&gt;</span>
+
+<span class="code-tag">&lt;input</span> <span class="code-attribute">id</span>=<span class="code-value">"email"</span> <span class="code-attribute">type</span>=<span class="code-value">"email"</span> <span class="code-attribute">name</span>=<span class="code-value">"email"</span><span class="code-tag">&gt;</span></code></pre>
+                </figure>
+            </section>
+
+            <section class="semantic-guide-section" aria-labelledby="semantic-links">
+                <div class="semantic-guide-section-heading">
+                    <div class="semantic-guide-section-icon" aria-hidden="true">
+                        <i class="bi bi-link-45deg"></i>
+                    </div>
+
+                    <h2 id="semantic-links">Links e botões</h2>
+                </div>
+
+                <p>Links e botões possuem funções diferentes e devem ser utilizados de acordo com o comportamento esperado.</p>
+
+                <div class="semantic-guide-code-comparison">
+                    <figure class="semantic-guide-code">
+                        <figcaption class="semantic-guide-code-header"><span>Evite</span></figcaption>
+                        <pre><code><span class="code-tag">&lt;div</span> <span class="code-attribute">onclick</span>=<span class="code-value">"abrirMenu()"</span><span class="code-tag">&gt;</span>
+    Abrir menu
+<span class="code-tag">&lt;/div&gt;</span></code></pre>
+                    </figure>
+
+                    <figure class="semantic-guide-code">
+                        <figcaption class="semantic-guide-code-header"><span>Prefira</span></figcaption>
+                        <pre><code><span class="code-tag">&lt;button</span> <span class="code-attribute">type</span>=<span class="code-value">"button"</span><span class="code-tag">&gt;</span>
+    Abrir menu
+<span class="code-tag">&lt;/button&gt;</span></code></pre>
+                    </figure>
+                </div>
+            </section>
+
+            <aside class="semantic-guide-highlight">
+                <i class="bi bi-check-circle" aria-hidden="true"></i>
+
+                <div>
+                    <strong>Pense semanticamente</strong>
+                    <p>Antes de escolher um elemento HTML, pense no significado e na função que ele possui.</p>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="footer" id="sobre">
+        <div class="footer-logo">
+            <img src="./IMG/logo-branco.png" alt="Acessa Dev">
+        </div>
+
+        <div class="footer-descricao">
+            <p>Ferramentas, guias e componentes para ajudar desenvolvedores a criarem experiências digitais mais acessíveis.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Links do rodapé">
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="./index.html">Início</a></li>
+                <li><a href="./ferramentas.html">Ferramentas</a></li>
+                <li><a href="./Guias.html">Guias</a></li>
+                <li><a href="#componentes">Componentes</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+
+        <div class="footer-copy">
+            <p>© 2026 Acessa Dev.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
